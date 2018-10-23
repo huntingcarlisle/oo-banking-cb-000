@@ -29,7 +29,7 @@ class Transfer
   def reverse_transfer
     if @status == "complete"
       @status = "reversed"
-      reversal = self.new(@receiver, @sender, @amount)
+      reversal = Transfer.new(@receiver, @sender, @amount)
       reversal.execute_transaction
     end
   end
