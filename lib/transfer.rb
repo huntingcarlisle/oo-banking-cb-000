@@ -31,6 +31,7 @@ class Transfer
       @status = "reversed"
       reversal = self.new(@receiver, @sender, @amount)
       reversal.execute_transaction
+    end
   end
   
 end
